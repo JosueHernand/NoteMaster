@@ -23,5 +23,6 @@ module.exports = function(app) {
 
     app.delete("/api/notes/:id", (req, res) => {
         const chosenId = req.params.id;
+        const oldNotes = JSON.parse(fs.readFileSync(path.join(__dirname, "../../db/db.json")));
     });
 };
