@@ -20,4 +20,8 @@ module.exports = function(app) {
         fs.writeFileSync(path.join(__dirname, "../../db/db.json"), JSON.stringify(oldNotes));
         res.json(oldNotes);
     });
+
+    app.delete("/api/notes/:id", (req, res) => {
+
+    });
 };
