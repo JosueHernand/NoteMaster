@@ -7,4 +7,8 @@ module.exports = function(app) {
         const notes = JSON.parse(fs.readFileSync(path.join(__dirname, "../../db/db.json")));
         res.json(notes);
     });
+
+    app.post("/api/notes", (req, res) => {
+
+    });
 };
