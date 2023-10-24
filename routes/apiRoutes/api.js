@@ -22,6 +22,6 @@ module.exports = function(app) {
     });
 
     app.delete("/api/notes/:id", (req, res) => {
-
+        const chosenId = req.params.id;
     });
 };
