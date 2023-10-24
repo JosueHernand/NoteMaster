@@ -4,6 +4,7 @@ const path = require("path");
 
 module.exports = function(app) {
     app.get("/api/notes", (req, res) => {
-
+        const notes = JSON.parse(fs.readFileSync(path.join(__dirname, "../../db/db.json")));
+        res.json(notes);
     });
 };
