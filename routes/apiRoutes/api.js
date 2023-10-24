@@ -25,5 +25,7 @@ module.exports = function(app) {
         const chosenId = req.params.id;
         const oldNotes = JSON.parse(fs.readFileSync(path.join(__dirname, "../../db/db.json")));
         const newNotes = oldNotes.filter(note => note.id !== chosenId);
+        fs.writeFileSync(path.join(__dirname, "../../db/db.json"), JSON.stringify(newNotes));
+        res.json(newNotes);
     });
 };
