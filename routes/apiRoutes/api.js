@@ -14,5 +14,10 @@ module.exports = function(app) {
             title: req.body.title,
             text: req.body.text
         };
+
+        const oldNotes = JSON.parse(fs.readFileSync(path.join(__dirname, "../../db/db.json")));
+        oldNotes.push(newNote);
+        fs.writeFileSync(path.join(__dirname, "../../db/db.json"), JSON.stringify(oldNotes));
+        res.json(oldNotes);
     });
 };
