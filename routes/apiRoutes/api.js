@@ -9,6 +9,10 @@ module.exports = function(app) {
     });
 
     app.post("/api/notes", (req, res) => {
-
+        const newNote = {
+            id: uuid(),
+            title: req.body.title,
+            text: req.body.text
+        };
     });
 };
