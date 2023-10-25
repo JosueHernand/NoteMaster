@@ -8,7 +8,7 @@ This project aims to assist small business owners in efficiently writing, saving
 
 1) Clone the repo: https://github.com/JosueHernand/NoteMaster
 2) Open repo in your code editor
-3) You'll nodejs too: https://nodejs.org/en/download/current
+3) You'll need nodejs too: https://nodejs.org/en/download/current
 4) Inside termial you will type the following: npm i
     to install all packages required to run the application.
 
